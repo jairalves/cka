@@ -13,3 +13,7 @@ k logs -n kube-system weave-net-957ql | grep ipalloc
 # To view services IP ranges 
 
 cat /etc/kubernetes/manifests/kube-apiserver.yaml   | grep cluster-ip-range
+
+# To view what proxy kube-proxy is using
+
+k logs -n kube-system kube-proxy-bvk9x
