@@ -9,3 +9,7 @@ ls /etc/cni/net.d/
 # For weave plugins we can check the IP range for pods looking the logs in the weave pod.
 
 k logs -n kube-system weave-net-957ql | grep ipalloc
+
+# To view services IP ranges 
+
+cat /etc/kubernetes/manifests/kube-apiserver.yaml   | grep cluster-ip-range
