@@ -17,3 +17,9 @@ cat /etc/kubernetes/manifests/kube-apiserver.yaml   | grep cluster-ip-range
 # To view what proxy kube-proxy is using
 
 k logs -n kube-system kube-proxy-bvk9x
+
+# Create ingress from the imperative form 
+
+Format - kubectl create ingress <ingress-name> --rule="host/path=service:port"
+
+Example - kubectl create ingress ingress-test --rule="wear.my-online-store.com/wear*=wear-service:80"
